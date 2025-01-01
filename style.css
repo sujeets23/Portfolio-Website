@@ -363,7 +363,7 @@ section .title::after{
     background: #539158;
 }
 .skills-content .right .figma::before{
-    width: 99%;
+    width: 90%;
 }
 .skills-content .right .photoshop::before{
     width: 90%;
