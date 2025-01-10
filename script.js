@@ -15,6 +15,10 @@ $(document).ready(function(){
         }
     });
 
+    //logo slide to top
+    $('.logo').click(function(){
+        $('html').animate({scrollTop: 0});
+    }
     // slide-up script
     $('.scroll-up-btn').click(function(){
         $('html').animate({scrollTop: 0});
