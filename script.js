@@ -47,7 +47,7 @@ $(document).ready(function(){
         backSpeed: 60,
         loop: true
     });
-
+    
     // owl carousel script
     $('.carousel').owlCarousel({
         margin: 20,
@@ -69,5 +69,43 @@ $(document).ready(function(){
                 nav: false
             }
         }
+    });
+
+    // Next and Previous buttons functionality
+    let currentIndex = 0;
+    const carouselItems = $('.carousel .item'); // assuming each carousel item has the class 'item'
+    const totalItems = carouselItems.length;
+
+    function updateCarouselPosition() {
+        const itemWidth = carouselItems.outerWidth(true); // width including margin
+        $('.carousel').animate({
+            scrollLeft: currentIndex * itemWidth
+        }, 300);
+    }
+
+    $('.prev-btn').click(function() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarouselPosition();
+        }
+    });
+
+    $('.next-btn').click(function() {
+        if (currentIndex < totalItems - 1) {
+            currentIndex++;
+            updateCarouselPosition();
+        }
+    });
+
+    // WhatsApp send message button functionality
+    $('#sendMessageBtn').click(function() {
+        // Predefined message
+        const message = 'Hi Sujeet, I am interested in discussing a project with you.';
+        
+        // WhatsApp URL format: https://wa.me/<phone_number>?text=<message>
+        const whatsappURL = `https://wa.me/7483104946?text=${encodeURIComponent(message)}`;
+        
+        // Open WhatsApp in a new tab
+        window.open(whatsappURL, '_blank');
     });
 });
