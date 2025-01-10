@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(90deg, #539158 0%, #08230A 100%);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+        img {
+            max-width: 70%;
+            max-height: 70%;
+            border-radius: 10px;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+        img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        p {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: white;
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 1em;
+            font-weight: bold;
+            color: #fff;
+            background-color: #3C763D;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        button:hover {
+            background-color: #00b894;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <img src="images/design fusion logo.png" alt="Logo Design">
+    <p>Logo Design</p>
+    <button onclick="window.location.href='explore more.html'">Explore More</button>
+</body>
+</html>
