@@ -133,6 +133,20 @@
                         </div>
                         <div class="line aftereffects"></div>
                     </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>Davinci Resolve</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="line davinci"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>Adobe XD</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="line xd"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -140,62 +154,26 @@
 
     <!-- projects section start -->
     <section class="projects" id="projects">
-        <div class="max-width">
-            <h2 class="title">My Projects</h2>
-            <div class="carousel owl-carousel">
-                <div class="card">
-                    <div class="box">
-                        <a href="porsche.html">
-                            <img src="images/Porsche 911 GT3 Poster@3x.jpg" alt="">
-                        </a>
-                        <div class="text">Porsche 911 GT3 Poster</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <a href="nike.html">
-                            <img src="images/nike shoe poster@3x.png" alt="">
-                        </a>
-                        <div class="text">Nike Shoe Poster</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <a href="mclaren.html">
-                            <img src="images/mclaren poster@3x.png" alt="">
-                        </a>
-                        <div class="text">Mclaren Poster</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <a href="navratri.html">
-                            <img src="images/navratri poster design.jpg" alt="">
-                        </a>
-                        <div class="text">Navratri Poster</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <a href="christmas poster.html">
-                            <img src="images/Christmas 2k24@3x.png" alt="">
-                        </a>
-                        <div class="text">Christmas Poster</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <a href="design fusion.html">
-                            <img src="images/design fusion logo.png" alt="">
-                        </a>
-                        <div class="text">Logo Design</div>
-                    </div>
-                </div>
-            </div>
-            <!-- View All Button -->
-            <div class="view-all-btn">
-                <a href="explore more.html" class="btn">View All Projects</a>
-            </div>
+        <h2 class="title">My Projects</h2>
+        <div class="project-content">
+            <img src="images/Porsche 911 GT3 Poster@3x.jpg" alt="Porsche 911 GT3 Poster" loading="lazy" class="project-image">
+            <img src="images/nike shoe poster@3x.png" alt="Nike Shoe Poster" loading="lazy" class="project-image">
+            <img src="images/mclaren poster@3x.png" alt="Mclaren Poster" loading="lazy" class="project-image">
+            <img src="images/navratri poster design.jpg" alt="Navratri Poster" loading="lazy" class="project-image">
+            <img src="images/Christmas 2k24@3x.png" alt="Christmas Poster" loading="lazy" class="project-image">
+            <img src="images/design fusion logo (2).png" alt="Design Fusion Logo" loading="lazy" class="project-image">
+            <img src="images/New One Logo red and yellow@3x 1.svg" alt="New One Logo" loading="lazy" class="project-image">
+            <img src="images/ferrari poster 2@2x.jpg" alt="Ferrari Poster" loading="lazy" class="project-image">
+            <img src="images/Messi Poster1.jpg" alt="Messi Poster" loading="lazy" class="project-image">
+            <img src="images/kitty party.jpg" alt="Kitty Party Poster" loading="lazy" class="project-image">
+            <img src="images/Rhythm banner.png" alt="Rhythm Banner" loading="lazy" class="project-image">
+            <img src="images/rhythm logo.png" alt="Rhythm Logo" loading="lazy" class="project-image">
+            <img src="images/rhythm instta post.png" alt="Rhythm Instagram Post" loading="lazy" class="project-image">
+            <img src="images/Christmas poster.png" alt="Christmas Poster" loading="lazy" class="project-image">
+            <img src="images/Food-Social-Media-Banner-20 1.svg" alt="Food Social Media Banner" loading="lazy" class="project-image">
+            <img src="images/Crestora Media Logo 1.svg" alt="Crestora Media Logo" loading="lazy" class="project-image">
+            <img src="images/mojito poster1 1.svg" alt="Mojito Poster" loading="lazy" class="project-image">
+            <img src="images/special burger design.png" alt="Special Burger Design" loading="lazy" class="project-image">
         </div>
     </section>
 
@@ -242,6 +220,12 @@
             </div>
         </div>
     </section>
+
+    <!-- Add this modal HTML before the closing body tag -->
+    <div id="imageModal" class="modal">
+        <span class="close-btn">&times;</span>
+        <img id="modalImage" class="modal-content">
+    </div>
 
     <script src="script.js"></script>
 </body>

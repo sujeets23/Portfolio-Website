@@ -398,178 +398,62 @@ section .title::after{
 .skills-content .right .aftereffects::before{
     width: 70%;
 }
+.skills-content .right .davinci::before{
+    width: 70%;
+}
+.skills-content .right .xd::before{
+    width: 90%;
+}
 
 /* Updated Projects Section Styling */
 /* projects section styling */
 .projects {
     padding: 60px 0;
-    background: linear-gradient(to right, #111, #222); /* Immersive gradient background */
+    background: #111;
     color: #fff;
-    text-align: center;
 }
 
 .projects .title {
-    font-size: 2.5em;
-    color: #00b894; /* Green title */
-    margin-bottom: 20px;
-}
-
-.projects .carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    position: relative;
-}
-
-.projects .carousel .carousel-container {
-    display: flex;
-    gap: 20px;
-    overflow: hidden;
-}
-
-.projects .carousel .card {
-    position: relative;
-    background: linear-gradient(145deg, #1e1e1e, #292929); /* Subtle gradient background */
-    border-radius: 12px;
-    padding: 20px;
-    width: 350px; /* Increased width */
-    height: 500px; /* Increased height */
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-}
-
-.projects .carousel .card:hover {
-    transform: scale(0.95); /* Scale down the card */
-    box-shadow: 0 12px 30px #00b894;
-    background: linear-gradient(145deg, #00b894, #111); /* Change background on hover */
-}
-
-.projects .carousel .card img {
-    width: 100%;
-    height: 280px; /* Increased image height */
-    object-fit: cover;
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-}
-
-.projects .carousel .card:hover img {
-    transform: scale(1.1); /* Zoom effect on hover */
-}
-
-.projects .carousel .card .box {
+    color: #fff;
+    margin-bottom: 30px;
     text-align: center;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: all 0.3s ease-in-out;
 }
 
-.projects .carousel .card:hover .box {
-    bottom: 40px; /* Slight animation */
+.projects .project-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.projects .carousel .card .text {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #fff;
-    margin: 10px 0;
-}
-
-.projects .carousel .card p {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #ccc;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.3s ease-in-out;
-}
-
-.projects .carousel .card:hover p {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.projects .carousel .card .btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    font-size: 1em;
-    font-weight: bold;
-    color: #fff;
-    background: #00b894;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background 0.3s ease-in-out;
-}
-
-.projects .carousel .card .btn:hover {
-    background: #111;
-    color: #00b894;
-    border: 2px solid #00b894;
-}
-
-/* Button Styling */
-.projects .carousel .prev-btn,
-.projects .carousel .next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #00b894;
-    color: #fff;
-    font-size: 1.5em;
+.projects img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+    background-color: #1e1e1e;
     padding: 10px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
 }
 
-.projects .carousel .prev-btn:hover,
-.projects .carousel .next-btn:hover {
-    background-color: #111;
-}
-
-.projects .carousel .prev-btn {
-    left: 10px;
-}
-
-.projects .carousel .next-btn {
-    right: 10px;
+.projects img:hover {
+    transform: scale(1.02);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .projects .carousel {
-        flex-direction: column;
+    .projects .project-content {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        padding: 0 15px;
     }
-
-    .projects .carousel .card {
-        width: 100%;
-        max-width: 350px;
+    
+    .projects img {
+        height: 250px;
     }
 }
-.view-all-btn {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.view-all-btn .btn {
-    padding: 10px 20px;
-    font-size: 1.2em;
-    color: #fff;
-    background-color: #00b894;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.view-all-btn .btn:hover {
-    background-color: #098a6a;
-}
-
 
 /* contact section styling */
 
@@ -827,4 +711,70 @@ footer span a:hover{
         font-size: 23px;
         line-height: 38px;
     }
+}
+
+/* Owl Carousel Navigation Buttons */
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid #fff!important; /* White border */
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+    background: #fff!important; /* White background for active dot */
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+}
+
+.modal-content {
+    display: block;
+    max-width: 90%;
+    max-height: 90vh;
+    margin: auto;
+    object-fit: contain;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.close-btn:hover {
+    color: #00b894;
+}
+
+/* Make project images clickable */
+.project-image {
+    cursor: pointer;
 }

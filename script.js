@@ -108,4 +108,36 @@ $(document).ready(function(){
         // Open WhatsApp in a new tab
         window.open(whatsappURL, '_blank');
     });
+
+    // Get modal elements
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const closeBtn = document.getElementsByClassName('close-btn')[0];
+
+    // Add click event to all project images
+    document.querySelectorAll('.project-image').forEach(img => {
+        img.addEventListener('click', function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        });
+    });
+
+    // Close modal when clicking the close button
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = "none";
+    });
+
+    // Close modal when clicking outside the image
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    // Close modal with escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === "block") {
+            modal.style.display = "none";
+        }
+    });
 });
